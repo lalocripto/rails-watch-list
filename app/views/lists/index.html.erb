@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Watch List</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+</head>
+<body>
+  <header class="main-header">
+    <h1>Movie Watch List</h1>
+    <nav>
+      <ul>
+        <li><%= link_to 'My Lists', lists_path %></li>
+        <li><%= link_to 'New List', new_list_path %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Save any kind of movies</h2>
+      <p>From classic hits to modern blockbusters, keep track of what you watch.</p>
+      <%= link_to 'Create a movie list', new_list_path, class: "cta-button" %>
+    </section>
+
+    <section class="movie-lists">
+      <% @lists.each do |list| %>
+        <article class="movie-list">
+          
+          <h3><%= list.name %></h3>
+        </article>
+      <% end %>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 Movie Watch List</p>
+  </footer>
+</body>
+</html>

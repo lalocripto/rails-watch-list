@@ -1,0 +1,113 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+
+// Variables
+$primary-color: #4a4e69;
+$secondary-color: #9a8c98;
+$background-color: #f2e9e4;
+$text-color: #22223b;
+$cta-color: #c9ada7;
+
+// Resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Main header
+.main-header {
+  background-color: $primary-color;
+  color: $background-color;
+  padding: 1rem;
+  h1 {
+    margin: 0;
+  }
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      display: inline;
+      margin-right: 1rem;
+    }
+  }
+}
+
+// Hero section
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  h2 {
+    font-size: 2.5rem;
+    color: $secondary-color;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  .cta-button {
+    background-color: $cta-color;
+    border: none;
+    padding: 1rem 2rem;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: 5px;
+    &:hover {
+      background-color: darken($cta-color, 10%);
+    }
+  }
+}
+
+// Movie lists
+.movie-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem 0;
+
+  .movie-list {
+    width: 200px;
+    margin: 1rem;
+    background-color: $secondary-color;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $primary-color;
+  color: $background-color;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
